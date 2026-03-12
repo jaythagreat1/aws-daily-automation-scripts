@@ -38,6 +38,11 @@ python -m scripts.multi_region_inventory
 
 # AWS Cloud Operations Automation
 
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![AWS](https://img.shields.io/badge/AWS-Automation-orange)
+![Boto3](https://img.shields.io/badge/boto3-AWS%20SDK-yellow)
+![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black)
+
 A lightweight automation toolkit designed to surface common operational issues in AWS environments related to **cost optimization, security exposure, IAM governance, tagging 
 compliance, and system observability**.
 
