@@ -1,0 +1,38 @@
+name: AWS Automation Scripts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-audits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run cost anomaly finder
+        run: python -m scripts.cost_anomaly_finder
+
+      - name: Run security group audit
+        run: python -m scripts.security_group_audit
+
+      - name: Run IAM audit
+        run: python -m scripts.iam_permission_audit
+
+      - name: Run tag compliance report
+        run: python -m scripts.tag_compliance_report
+
+      - name: Run Lambda error summary
+        run: python -m scripts.lambda_error_summary
+
+      - name: Run multi region inventory
+        run: python -m scripts.multi_region_inventory
