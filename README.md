@@ -1,3 +1,41 @@
+## Quick Start
+Clone the repository:
+
+```bash
+git clone https://github.com/jaythagreat1/aws-daily-automation-scripts.git
+cd aws-daily-automation-scripts
+```
+
+Create a virtual environment:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Configure AWS credentials:
+
+```bash
+aws configure
+```
+
+Run any script:
+
+```bash
+python -m scripts.cost_anomaly_finder
+python -m scripts.security_group_audit
+python -m scripts.iam_permission_audit
+python -m scripts.tag_compliance_report
+python -m scripts.lambda_error_summary
+python -m scripts.multi_region_inventory
+```
+
 # AWS Cloud Operations Automation
 
 A lightweight automation toolkit designed to surface common operational issues in AWS environments related to **cost optimization, security exposure, IAM governance, tagging 
